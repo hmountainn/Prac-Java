@@ -10,7 +10,7 @@ public class Hello {
 		//FileInputStream이용해서 입력받기
 		//FileOutputStream이용해서 파일에 출력하기
 		
-		//1.변수 설정
+		//1.변수 만들기
 		int kor, eng, math, total;
 		double avg;
 		
