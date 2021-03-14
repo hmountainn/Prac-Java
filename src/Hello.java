@@ -14,15 +14,15 @@ public class Hello {
 		total = kor + eng + math;
 		avg = total/3;
 		
-		//2. printlnln()이용출력
+		//2. printf()로 형식지정해서 출력
 		System.out.println("┌─────────────────┐");
 		System.out.println("│     성적 출력      │");
 		System.out.println("└─────────────────┘");
-		System.out.println("국어: "+ kor);
-		System.out.println("영어: "+ eng);
-		System.out.println("수학: "+ math);
-		System.out.println("총점: "+ total);
-		System.out.println("평균: "+ avg);
+		System.out.printf("국어:%d\n", kor);
+		System.out.printf("영어:%d\n", eng);
+		System.out.printf("수학:%d\n", math);
+		System.out.printf("총점:%d\n", total);
+		System.out.printf("평균:%.1f\n ", avg);
 
 	}
 
