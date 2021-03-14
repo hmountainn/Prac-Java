@@ -12,11 +12,11 @@ public class IfProgram {
 		System.out.print("정수 입력:");
 		int x = scan.nextInt();
 		
-		//2.만약 x가 3보다 크면 문자열"큰 값" 출력
-		if(x>3)
-			System.out.println("큰 값");
+		//2-1. 만약에 그 값이 짝수면 "짝수 값"이라는 문자열을 출력한다
+		if(x%2==0)
+			System.out.println("짝수");
 		else
-			System.out.println("작은 값");
+			System.out.println("홀수");
 	}
 
 }
