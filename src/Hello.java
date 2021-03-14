@@ -37,9 +37,6 @@ public class Hello {
 		System.out.printf("¼öÇÐ:%d\n", math);
 		System.out.printf("ÃÑÁ¡:%d\n", total);
 		System.out.printf("Æò±Õ:%.1f\n ", avg);
-		
-		
-		
 	}
 
 }
