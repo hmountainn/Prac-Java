@@ -1,4 +1,4 @@
-package ex2.array;
+package ex3.array;
 
 public class Program {
 
