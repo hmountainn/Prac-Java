@@ -20,12 +20,21 @@ public class Program {
 		while(scan.hasNextLine()) {
 			names[i++] = scan.nextLine();
 			
-			System.out.printf(names[i-1]);
+//			System.out.printf(names[i-1]);
 		}
 		
 		scan.close();
 		fis.close();
-		
+
+		//3. names 배열의 이름을 다음처럼 콘솔에 출력
+			//홍길동,김길동,강호동,유재석
+			for(int j=0; j<i; j++) {
+				System.out.printf("\"%s\"",names[j]);
+			
+				//예외
+				if(j<i-1)
+					System.out.print(",");
+			}
 
 	}
 
