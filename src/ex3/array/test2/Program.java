@@ -23,6 +23,9 @@ public class Program {
 			System.out.printf(names[i-1]);
 		}
 		
+		scan.close();
+		fis.close();
+		
 
 	}
 
