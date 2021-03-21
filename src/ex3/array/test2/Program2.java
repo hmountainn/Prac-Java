@@ -26,6 +26,7 @@ public class Program2 {
 			list[idx] = temp;
 		}
 		
+		//섞은거 출력
 		for(int i=0; i<7; i++) {
 			if(i < 6)
 				System.out.printf("%s,", list[i]);
@@ -36,7 +37,7 @@ public class Program2 {
 		System.out.println();
 		
 		//4.순서대로 정렬
-		for(int i=0; i<list.length; i++)
+		for(int i=1; i<list.length; i++)
 			for(int j=0; j<i; j++)
 				if(list[i].compareTo(list[j])<0) {
 					temp = list[i];
