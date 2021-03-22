@@ -17,24 +17,18 @@ public class Program4 {
 		//맨윗줄 버리기
 		scan.nextLine();
 		
-		//배열생성
+		//날짜별 누적 검사진행자수 출력
 		String line;
-		String[][] lines = new String[76][];
-		
-		//데이터 레코드수 구하기
-		int count=0;
+		int sum = 0;
 		while(scan.hasNextLine()) {
 			line = scan.nextLine();
-			lines[count++] = line.split(","); 
-		}
-		
-		//날짜별 누적 검사진행자수 출력
-		int sum = 0;
-		for(int i = 0; i<count; i++) {
-			sum = sum + Integer.parseInt(lines[i][3]);
-			System.out.println("------------------------");
-			System.out.printf("날짜:%s\n", lines[i][0]);
+			String cols[]=line.split(",");
+			
+			sum = sum + Integer.parseInt(cols[3]);
+			
+			System.out.printf("날짜:%s\n", cols[0]);
 			System.out.printf("누적 검사진행자수:%d\n", sum);
+			System.out.println("------------------------");
 		}
 		
 		scan.close();
