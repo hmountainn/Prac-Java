@@ -61,9 +61,27 @@ public class Program3MultiArray3 {
 			for(int i=0; i<count; i++) {
 				sum += Integer.parseInt(lines[i][3]);
 			}
-			System.out.printf("누적 검사진행자수:%d", sum);
+			System.out.printf("누적 검사진행자수:%d\n", sum);
+			System.out.println("------------------");
 		}
 		
+		//가장많은 검사수와 그 일자 출력
+		{
+			int max=0;
+			String date="";
+			int idx=0;
+			for(int i=0; i<count; i++) {
+				if(max<Integer.parseInt(lines[i][3])) {
+					max = Integer.parseInt(lines[i][3]);
+					date = lines[i][0];
+				}
+			}
+
+			System.out.printf("날짜:%s\n",date);
+			System.out.printf("가장 많은 검사 수:%d",max);
+			
+			
+		}
 		
 	}	
 }
