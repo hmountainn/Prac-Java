@@ -83,17 +83,20 @@ public class Program3MultiArray3 {
 		
 		//확진자 수가 늘어난 일자와 늘어난 수 출력
 		{
-			String date;
-			int before = 0;
-			int after;
-			int dif;
+			String date; //날짜
+			int before = 0; //이전 확진자 수
+			int after; //현재 확진자 수
+			int dif; //늘어난 확진자 수
 			
 			for(int i=0; i<count; i++) {
 				after=Integer.parseInt(lines[i][1]);
-				if(before!=after) {
-					dif = after-before;
+				if(before!=after) { //확진자수 이전과 같지않으면
 					
-					date = lines[i][0];
+					
+					dif = after-before; //늘어난 수
+					date = lines[i][0]; //날짜
+					
+					//출력
 					System.out.println("----------------------");
 					System.out.printf("날짜:%s\n",date);
 					System.out.printf("추가 확진자 수:%d\n",dif);
@@ -101,6 +104,7 @@ public class Program3MultiArray3 {
 				}
 			}
 		}
+
 		
 	}	
 }
