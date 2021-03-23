@@ -2,6 +2,7 @@ package ex3.array;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Program3MultiArray3 {
@@ -91,8 +92,7 @@ public class Program3MultiArray3 {
 			for(int i=0; i<count; i++) {
 				after=Integer.parseInt(lines[i][1]);
 				if(before!=after) { //확진자수 이전과 같지않으면
-					
-					
+			
 					dif = after-before; //늘어난 수
 					date = lines[i][0]; //날짜
 					
@@ -104,9 +104,60 @@ public class Program3MultiArray3 {
 				}
 			}
 		}
+		
+		//늘어난 확진자 수와 날짜 2차원 전역배열에 담기	
+		//전역배열
+		String [][] results;
+		int resultcount=0; //확진자 수 늘어난 횟수
+		{	
+			//resultcount설정
+			int before = 0;
+			int after;
+			for(int i=0; i<count; i++) {
+				after=Integer.parseInt(lines[i][1]);
+				if(before!=after) {
+					resultcount++;
+					before=after;
+				}
+			}
+			//배열 크기 설정
+			results = new String[resultcount][];
+			
+			//임시배열 선언
+			String[] row = new String[2];
+
+			int dif;
+			String date;
+			int idx=0;
+			before = 0;
+			
+			for(int i=0; i<count; i++) {
+				after=Integer.parseInt(lines[i][1]);
+				if(before!=after) {
+					
+					dif = after-before;
+					date = lines[i][0];
+					before=after;
+					
+					//임시배열에 담기
+					row[0] = date;
+					row[1] = String.valueOf(dif);
+					
+					//전역배열에 담기
+					results[idx] = row;
+				
+					//출력
+					System.out.println(Arrays.toString(results[idx]));
+					idx++;
+				}
+			}
+			
+			
+		}
 
 		
-	}	
+	}
 }
+
 
 
