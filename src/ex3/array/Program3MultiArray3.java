@@ -78,9 +78,28 @@ public class Program3MultiArray3 {
 			}
 
 			System.out.printf("날짜:%s\n",date);
-			System.out.printf("가장 많은 검사 수:%d",max);
+			System.out.printf("가장 많은 검사 수:%d\n",max);
+		}
+		
+		//확진자 수가 늘어난 일자와 늘어난 수 출력
+		{
+			String date;
+			int before = 0;
+			int after;
+			int dif;
 			
-			
+			for(int i=0; i<count; i++) {
+				after=Integer.parseInt(lines[i][1]);
+				if(before!=after) {
+					dif = after-before;
+					
+					date = lines[i][0];
+					System.out.println("----------------------");
+					System.out.printf("날짜:%s\n",date);
+					System.out.printf("추가 확진자 수:%d\n",dif);
+					before=after;
+				}
+			}
 		}
 		
 	}	
