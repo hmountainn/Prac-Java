@@ -10,6 +10,12 @@ public class Program { //함수 정의 및 활용
 	static int add(int x,int y) {
 		return x+y;
 	}
+	
+	//출력 함수(리턴값x)
+	static void print(String x) {
+		System.out.println(x);
+	}
+
 
 	
 	
@@ -21,6 +27,9 @@ public class Program { //함수 정의 및 활용
 		//add 활용
 		result = add(2,3);
 		System.out.printf("add함수 리턴값:%d\n",result);
+	
+		//print 활용
+		print("프린트");
 	}
 
 }
