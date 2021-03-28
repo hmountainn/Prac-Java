@@ -15,6 +15,15 @@ public class Program { //함수 정의 및 활용
 	static void print(String x) {
 		System.out.println(x);
 	}
+	
+	//x부터 length만큼 더하기
+	static int printSum(int x, int length) {
+		int sum=0;
+		for(int i=0; i<length; i++) {
+			sum +=x+i;
+		}
+		return sum;
+	}
 
 
 	
@@ -30,6 +39,10 @@ public class Program { //함수 정의 및 활용
 	
 		//print 활용
 		print("프린트");
+		
+		//printSum 활용
+		int results = printSum(2,4);
+		System.out.printf("printSum함수 리턴값:%d",results);
 	}
 
 }
