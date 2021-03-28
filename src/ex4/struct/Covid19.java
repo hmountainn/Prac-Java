@@ -6,5 +6,5 @@ public class Covid19 {
 	int positive;
 	int death;
 	int tests;
-
+	int selfIsolation;
 }
