@@ -77,6 +77,23 @@ public class Program3MultiArray3 {
 		System.out.println("------------------");
 	}
 	
+	//--------------------------------
+	//일별 가장많은 검사수와 그 일자 출력
+	static void printMax(String[][] lines, int count) {
+		int max=0;
+		String date="";
+		int idx=0;
+		for(int i=0; i<count; i++) {
+			if(max<Integer.parseInt(lines[i][3])) {
+				max = Integer.parseInt(lines[i][3]);
+				date = lines[i][0];
+			}
+		}
+		System.out.printf("날짜:%s\n",date);
+		System.out.printf("가장 많은 검사 수:%d\n",max);
+	}
+
+	
 	public static void main(String[] args) throws IOException {
 		
 		//--------------------------------
@@ -103,25 +120,10 @@ public class Program3MultiArray3 {
 		//누적 검사진행자수 출력
 		printCumulative(sum);
 		
+		//--------------------------------
+		//일별 가장많은 검사수와 그 일자 출력
+		printMax(lines, count);
 		
-//		
-//		//--------------------------------
-//		//일별 가장많은 검사수와 그 일자 출력
-//		{
-//			int max=0;
-//			String date="";
-//			int idx=0;
-//			for(int i=0; i<count; i++) {
-//				if(max<Integer.parseInt(lines[i][3])) {
-//					max = Integer.parseInt(lines[i][3]);
-//					date = lines[i][0];
-//				}
-//			}
-//
-//			System.out.printf("날짜:%s\n",date);
-//			System.out.printf("가장 많은 검사 수:%d\n",max);
-//		}
-//		
 //		//--------------------------------
 //		//확진자 수가 늘어난 일자와 늘어난 수 출력
 //		{
