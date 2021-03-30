@@ -91,6 +91,29 @@ public class Program3MultiArray3 {
 		}
 		System.out.printf("날짜:%s\n",date);
 		System.out.printf("가장 많은 검사 수:%d\n",max);
+		System.out.println("------------------");
+	}
+	
+	static void printChange(String[][] lines, int count) {
+		String date; //날짜
+		int before = 0; //이전 확진자 수
+		int after; //현재 확진자 수
+		int dif; //늘어난 확진자 수
+		
+		for(int i=0; i<count; i++) {
+			after=Integer.parseInt(lines[i][1]);
+			if(before!=after) { //확진자수 이전과 같지않으면
+		
+				dif = after-before; //늘어난 수
+				date = lines[i][0]; //날짜
+				
+				//출력
+				
+				System.out.printf("날짜:%s\n",date);
+				System.out.printf("추가 확진자 수:%d\n",dif);
+				before=after;
+			}
+		}
 	}
 
 	
@@ -124,80 +147,61 @@ public class Program3MultiArray3 {
 		//일별 가장많은 검사수와 그 일자 출력
 		printMax(lines, count);
 		
-//		//--------------------------------
-//		//확진자 수가 늘어난 일자와 늘어난 수 출력
-//		{
-//			String date; //날짜
-//			int before = 0; //이전 확진자 수
-//			int after; //현재 확진자 수
-//			int dif; //늘어난 확진자 수
-//			
-//			for(int i=0; i<count; i++) {
-//				after=Integer.parseInt(lines[i][1]);
-//				if(before!=after) { //확진자수 이전과 같지않으면
-//			
-//					dif = after-before; //늘어난 수
-//					date = lines[i][0]; //날짜
-//					
-//					//출력
-//					System.out.println("----------------------");
-//					System.out.printf("날짜:%s\n",date);
-//					System.out.printf("추가 확진자 수:%d\n",dif);
-//					before=after;
-//				}
-//			}
-//		}
-//		
-//		//--------------------------------
-//		//늘어난 확진자 수와 날짜 2차원 전역배열에 담기	
-//		//전역배열
-//		String [][] results;
-//		int resultcount=0; //확진자 수 늘어난 횟수
-//		{	
-//			//resultcount설정
-//			int before = 0;
-//			int after;
-//			for(int i=0; i<count; i++) {
-//				after=Integer.parseInt(lines[i][1]);
-//				if(before!=after) {
-//					resultcount++;
-//					before=after;
-//				}
-//			}
-//			//배열 크기 설정
-//			results = new String[resultcount][];
-//			
-//			//임시배열 선언
-//			String[] row = new String[2];
-//
-//			int dif;
-//			String date;
-//			int idx=0;
-//			before = 0;
-//			
-//			for(int i=0; i<count; i++) {
-//				after=Integer.parseInt(lines[i][1]);
-//				if(before!=after) {
-//					
-//					dif = after-before;
-//					date = lines[i][0];
-//					before=after;
-//					
-//					//임시배열에 담기
-//					row[0] = date;
-//					row[1] = String.valueOf(dif);
-//					
-//					//전역배열에 담기
-//					results[idx] = row;
-//				
-//					//출력
-//					System.out.println(Arrays.toString(results[idx]));
-//					idx++;
-//				}
-//			}
-//			
-//			
-//		}
+		//--------------------------------
+		//확진자 수가 늘어난 일자와 늘어난 수 출력
+		printChange(lines, count);
+		
+		
+		//--------------------------------
+		//늘어난 확진자 수와 날짜 2차원 전역배열에 담기	
+		//전역배열
+		String [][] results;
+		int resultcount=0; //확진자 수 늘어난 횟수
+		{	
+			//resultcount설정
+			int before = 0;
+			int after;
+			for(int i=0; i<count; i++) {
+				after=Integer.parseInt(lines[i][1]);
+				if(before!=after) {
+					resultcount++;
+					before=after;
+				}
+			}
+			//배열 크기 설정
+			results = new String[resultcount][];
+			
+			//임시배열 선언
+			String[] row = new String[2];
+
+			int dif;
+			String date;
+			int idx=0;
+			before = 0;
+			
+			for(int i=0; i<count; i++) {
+				after=Integer.parseInt(lines[i][1]);
+				if(before!=after) {
+					
+					dif = after-before;
+					date = lines[i][0];
+					before=after;
+					
+					//임시배열에 담기
+					row[0] = date;
+					row[1] = String.valueOf(dif);
+					
+					//전역배열에 담기
+					results[idx] = row;
+				
+					//출력
+					System.out.println(Arrays.toString(results[idx]));
+					idx++;
+				}
+			}
+			
+			
+		}
 
 		
 	}
