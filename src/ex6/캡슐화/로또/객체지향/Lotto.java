@@ -14,7 +14,7 @@ public class Lotto {
 	//로또 객체안의 변수 초기화하기
 	public void init() {
 		this.size = 6;
-		this.num = new int[size];
+		this.num = new int[this.size];
 		
 	}
 	
