@@ -10,6 +10,9 @@ public class Program {
 		//로또 객체안의 자료형 사용하기
 		Lotto lotto = new Lotto();
 		
+		//size설정 (사용자)
+		lotto.setSize(6);
+		
 		//로또객체 초기화
 		lotto.init();
 		

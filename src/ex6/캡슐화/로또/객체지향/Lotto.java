@@ -25,6 +25,13 @@ public class Lotto {
 	}
 	
 	//-------------------------------------
+	//사용자가 size설정
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
+	
+	//-------------------------------------
 	//private int[] num print()에서사용할수있도록 하기
 	public int getNum(int i) {
 		return this.num[i];
