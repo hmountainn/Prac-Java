@@ -10,6 +10,9 @@ public class Program {
 		//로또 객체안의 자료형 사용하기
 		Lotto lotto = new Lotto();
 		
+		//LottoConsole객체 사용
+		LottoConsole lottocon = new LottoConsole();
+		
 		//size설정 (사용자)
 		lotto.setSize(6);
 		
@@ -20,13 +23,13 @@ public class Program {
 		lotto.gen();
 		
 		// 로또번호 출력
-		LottoConsole.print(lotto);
+		lottocon.print(lotto);
 		
 		// 로또번호 정렬
 		lotto.sort();
 		
 		// 정렬된 번호 출력
-		LottoConsole.print(lotto);
+		lottocon.print(lotto);
 
 	}
 
