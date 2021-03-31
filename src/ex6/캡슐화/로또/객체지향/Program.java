@@ -20,28 +20,16 @@ public class Program {
 		lotto.gen();
 		
 		// 로또번호 출력
-		print(lotto);
+		LottoConsole.print(lotto);
 		
 		// 로또번호 정렬
 		lotto.sort();
 		
 		// 정렬된 번호 출력
-		print(lotto);
+		LottoConsole.print(lotto);
 
 	}
-	
 
-	
-	//-------------------------------------
-	// 로또번호 출력
-	//print는 main메소드 안에 있기때문에 파라미터로 받아야함(this사용 x)
-	private static void print(Lotto x) {
-		for(int i=0; i<Lotto.getSize(x); i++) {
-			System.out.printf("["+"%d"+"] ",x.getNum(i));
-		}
-		System.out.println();
-	}
-	
 
 
 }
