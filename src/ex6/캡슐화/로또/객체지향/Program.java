@@ -31,7 +31,7 @@ public class Program {
 	
 	//-------------------------------------
 	// 로또번호 출력
-	//print는 콘솔 출력용이기 때문에 안옮김
+	//print는 main메소드 안에 있기때문에 파라미터로 받아야함(this사용 x)
 	private static void print(Lotto x) {
 		for(int i=0; i<Lotto.getSize(x); i++) {
 			System.out.printf("["+"%d"+"] ",x.getNum(i));
