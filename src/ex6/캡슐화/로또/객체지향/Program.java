@@ -34,7 +34,7 @@ public class Program {
 	//print는 콘솔 출력용이기 때문에 안옮김
 	private static void print(Lotto x) {
 		for(int i=0; i<Lotto.getSize(x); i++) {
-			System.out.printf("["+"%d"+"] ",Lotto.getNum(x, i));
+			System.out.printf("["+"%d"+"] ",x.getNum(i));
 		}
 		System.out.println();
 	}

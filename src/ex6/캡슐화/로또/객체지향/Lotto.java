@@ -26,8 +26,8 @@ public class Lotto {
 	
 	//-------------------------------------
 	//private int[] num print()에서사용할수있도록 하기
-	public static int getNum(Lotto lotto, int i) {
-		return lotto.num[i];
+	public int getNum(int i) {
+		return this.num[i];
 	}
 	
 	
