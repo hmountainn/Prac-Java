@@ -5,7 +5,7 @@ public class NewExam extends Exam{
 	private int com;
 	
 	public NewExam() {
-		//super(); 생략
+		super(20,20,20); //Exam 오버로드 생성자 호출
 		com = 10;
 	}
 	

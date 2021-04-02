@@ -11,6 +11,12 @@ public class Exam {
 		math = 10;
 	}
 	
+	public Exam(int kor, int eng, int math) {
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	
 	public int total() {
 		return kor+eng+math;
 	}
