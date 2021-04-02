@@ -3,9 +3,7 @@ package ex7.상속;
 import java.util.Random;
 
 public class Lotto {
-	//생성자 설정(init, setSize삭제)
-	
-	//변수 선언
+
 	private int[] num;
 	private int size;
 	
