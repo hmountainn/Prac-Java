@@ -3,8 +3,8 @@ package ex7.상속.IS_A;
 public class ExamProgram {
 
 	public static void main(String[] args) {
-		//NewExam객체 사용
-		NewExam exam = new NewExam();
+		//참조형식 부모형식으로 변경
+		Exam exam = new NewExam();
 		int total = exam.total();
 		float avg = exam.avg();
 		
