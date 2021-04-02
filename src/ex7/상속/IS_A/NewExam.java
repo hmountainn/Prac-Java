@@ -5,8 +5,13 @@ public class NewExam extends Exam{
 	private int com;
 	
 	public NewExam() {
-		super(20,20,20); //Exam 오버로드 생성자 호출
-		com = 10;
+		this(10,10,10,10); //중복제거
+	}
+	
+	//오버로드 생성자
+	public NewExam(int kor, int eng, int math, int com) {
+		super(kor, eng, math); //Exam오버로드 생성자 호출
+		this.com = com;
 	}
 	
 	//오버라이드해서 com추가
