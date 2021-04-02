@@ -15,6 +15,10 @@ public class Exam {
 		return kor+eng+math;
 	}
 	
+	public int total(int ext) { //오버로드 함수
+		return kor+eng+math;
+	}
+	
 	public float avg() {
 		return this.total() / 3.0f;
 	}
