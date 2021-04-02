@@ -5,6 +5,11 @@ public class Exam {
 	private int eng;
 	private int math;
 	
+	public Exam() {//»ý¼ºÀÚ
+		kor = 10;
+		eng = 10;
+		math = 10;
+	}
 	
 	public int total() {
 		return kor+eng+math;
