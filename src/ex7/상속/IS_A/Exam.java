@@ -6,12 +6,10 @@ public class Exam {
 	private int math;
 	
 	public Exam() {//생성자
-		kor = 10;
-		eng = 10;
-		math = 10;
+		this(10,10,10); //중복제거
 	}
 	
-	public Exam(int kor, int eng, int math) {
+	public Exam(int kor, int eng, int math) { //오버로드 생성자
 		this.kor = kor;
 		this.eng = eng;
 		this.math = math;
