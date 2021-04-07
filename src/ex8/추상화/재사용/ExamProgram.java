@@ -3,18 +3,23 @@ package ex8.추상화.재사용;
 public class ExamProgram {
 
 	public static void main(String[] args) {
-		//YBMExam객체 사용
-		Exam exam = new YBMExam();
-		System.out.println(exam.avg());
 		
-		//배열통해 일괄사용
-		Exam[] exams = new Exam[2];
-		exams[0] = new NewExam();
-		exams[1] = new YBMExam();
+		Exam exam = new YBMExam(1,1,1,1,1);
 		
-		for(int i=0; i<2; i++) {
-			System.out.println(exams[i].avg());
-		}
+		YBMExamConsole ybmConsole = new YBMExamConsole();
+		ybmConsole.setExam(exam);
+		
+		ybmConsole.input();
+		ybmConsole.print();
+		
+//		//생성자 종속성 주입:Constructor DI(Dependency Injection)
+//		//분리형
+//		//ExamConsole안에 (exam) 부품을 끼워넣는거 //조립
+//		ExamConsole console = new ExamConsole(exam);
+//		//Setter DI
+//		console.setExam(exam);
+//		
+//		console.print();
+		
 	}
-
 }
