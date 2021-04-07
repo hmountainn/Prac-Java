@@ -25,4 +25,34 @@ public abstract class Exam { //추상화 클래스
 	
 	//추상화 메소드(자식들 무조건 구현해야함)
 	public abstract float avg();
+
+	
+	//setter 와 getter
+	public int getKor() {
+		return kor;
+	}
+
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+
+	public int getEng() {
+		return eng;
+	}
+
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+
+	public int getMath() {
+		return math;
+	}
+
+	public void setMath(int math) {
+		this.math = math;
+	}
+	
+	
+	
+	
 }
