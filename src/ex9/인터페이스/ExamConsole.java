@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ExamConsole{
 	
 	private Exam exam;
+	private Banner banner;
 	
 	public ExamConsole() {
 		
@@ -22,14 +23,19 @@ public class ExamConsole{
 		return exam;
 	}
 	
+	public void setBanner(Banner banner) {
+		this.banner = banner;
+	}
+	
 	protected void onPrint() {
 		
 	}
 	
 	public void print() {
-		System.out.println("-----------------------------");
-		System.out.println("           己利 免仿           ");
-		System.out.println("-----------------------------");
+//		System.out.println("-----------------------------");
+//		System.out.println("           己利 免仿           ");
+//		System.out.println("-----------------------------");
+		banner.start();
 		System.out.printf("kor:%d\n", exam.getKor());
 		System.out.printf("eng:%d\n", exam.getEng());
 		System.out.printf("math:%d\n", exam.getMath());
@@ -37,7 +43,8 @@ public class ExamConsole{
 		onPrint();
 		System.out.printf("total:%d\n", exam.total());
 		System.out.printf("avg:%f\n", exam.avg());
-		System.out.println("-----------------------------");
+//		System.out.println("-----------------------------");
+		banner.end();
 	}
 	
 	public void input() {

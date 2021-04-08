@@ -16,10 +16,13 @@ public class ExamProgram {
 		
 		
 		//YBMExam »ç¿ë(is a)
-		YBMExam exam1 = new YBMExam(1,1,1,1,1);
+		YBMExam exam = new YBMExam(1,1,1,1,1);
+		Banner banner = new YBMBanner();
 		
 		YBMExamConsole ybmconsole = new YBMExamConsole();
-		ybmconsole.setExam(exam1);
+		ybmconsole.setExam(exam);
+		ybmconsole.setBanner(banner);
+
 		
 		ybmconsole.input();
 		ybmconsole.print();
