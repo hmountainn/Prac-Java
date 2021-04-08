@@ -4,12 +4,12 @@ public class ExamProgram {
 
 	public static void main(String[] args) {
 		
-		Exam exam = new NewExam(1,1,1,1);
+		YBMExam exam = new YBMExam(1,1,1,1,1);
 		
-		ExamConsole console = new ExamConsole(exam);
-		console.setExam(exam);
+		YBMExamConsole ybmconsole = new YBMExamConsole();
+		ybmconsole.setExam(exam);
 		
-		console.print();
+		ybmconsole.print();
 
 	}
 }
