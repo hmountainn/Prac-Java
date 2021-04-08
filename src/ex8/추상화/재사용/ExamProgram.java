@@ -4,7 +4,7 @@ public class ExamProgram {
 
 	public static void main(String[] args) {
 		
-		//NewExam사용
+		//NewExam사용(has a)
 		Exam exam = new NewExam();
 		
 		ExamConsole console = new ExamConsole();
@@ -13,7 +13,7 @@ public class ExamProgram {
 		console.print();
 		
 		
-		//YBMExam 사용
+		//YBMExam 사용(is a)
 		YBMExam exam1 = new YBMExam(1,1,1,1,1);
 		
 		YBMExamConsole ybmconsole = new YBMExamConsole();
