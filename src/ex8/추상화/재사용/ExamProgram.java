@@ -4,10 +4,20 @@ public class ExamProgram {
 
 	public static void main(String[] args) {
 		
-		YBMExam exam = new YBMExam(1,1,1,1,1);
+		//NewExam사용
+		Exam exam = new NewExam();
+		
+		ExamConsole console = new ExamConsole();
+		console.setExam(exam);
+		
+		console.print();
+		
+		
+		//YBMExam 사용
+		YBMExam exam1 = new YBMExam(1,1,1,1,1);
 		
 		YBMExamConsole ybmconsole = new YBMExamConsole();
-		ybmconsole.setExam(exam);
+		ybmconsole.setExam(exam1);
 		
 		ybmconsole.print();
 
