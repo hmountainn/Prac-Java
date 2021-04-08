@@ -1,5 +1,7 @@
 package ex8.추상화.재사용;
 
+import java.util.Scanner;
+
 public class ExamConsole{
 	
 	private Exam exam;
@@ -36,6 +38,22 @@ public class ExamConsole{
 		System.out.printf("total:%d\n", exam.total());
 		System.out.printf("avg:%f\n", exam.avg());
 		System.out.println("-----------------------------");
+	}
+	
+	public void input() {
+		
+		int kor,eng,math;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("kor:");
+		kor = scan.nextInt();
+		System.out.print("eng:");
+		eng = scan.nextInt();
+		System.out.print("math:");
+		math = scan.nextInt();
+		
+		exam.setKor(kor);
+		exam.setEng(eng);
+		exam.setMath(math);
 	}
 	
 	

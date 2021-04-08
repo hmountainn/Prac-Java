@@ -10,16 +10,18 @@ public class ExamProgram {
 		ExamConsole console = new ExamConsole();
 		console.setExam(exam);
 		
+		console.input();
 		console.print();
+
 		
 		
-		//YBMExam 사용(is a)
-		YBMExam exam1 = new YBMExam(1,1,1,1,1);
-		
-		YBMExamConsole ybmconsole = new YBMExamConsole();
-		ybmconsole.setExam(exam1);
-		
-		ybmconsole.print();
+//		//YBMExam 사용(is a)
+//		YBMExam exam1 = new YBMExam(1,1,1,1,1);
+//		
+//		YBMExamConsole ybmconsole = new YBMExamConsole();
+//		ybmconsole.setExam(exam1);
+//		
+//		ybmconsole.print();
 
 	}
 }
